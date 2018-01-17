@@ -2,10 +2,121 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>HTML Refresher</title>
+    <title>Site Style Guide</title>
     <meta name="viewport"
       content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
   </head>
   <body>
+    <header id="header">
+      <h1>My Amazing Site</h1>
+    </header>
+
+    <main id="content">
+      <article id="primary">
+        <header>
+          <h2>Site Style Guide</h2>
+        </header>
+        <section class="headings">
+          <header>
+            <h3>Headings</h3>
+          </header>
+          <!--
+            NOTE: Do NOT use headings like this; these are only for the style guide.
+          -->
+          <h1>The Reserved First-Level Heading</h1>
+          <p>
+            Under this style guide, <code>&lt;h1&gt;</code> is used only for styling the site name.
+          </p>
+          <h2>The Page-Labeling Second-Level Heading</h2>
+          <p>
+             Used only for labeling pages and other landmark elements, such as a page-wide
+             <code>&lt;aside&gt;</code>.
+          </p>
+          <h3>For Complex Content, a Third-Level Heading</h3>
+          <p>
+            When content gets complex enough under a single <code>&lt;h2&gt;</code>, use an
+            <code>&lt;h3&gt;</code> to further subdivide content. This is most like a subheading in
+            this style guide.
+          </p>
+          <h4>The Rarely Used but Potentially Necessary Fourth-Level Heading</h4>
+          <p>
+            And when things get truly unruly and complex under an <code>&lt;h3&gt;</code>, subdivide
+            its content further with an <code>&lt;h4&gt;</code>. But, consider whether a content
+            rewrite or separate page might be needed to better present the content in a less
+            subdivided structure.
+          </p>
+        </section>
+        <section class="paragraphs">
+          <header>
+            <h3>Paragraphs</h3>
+          </header>
+          <p>
+            Behold, the simplicity and semantics of the paragraph element, <code>&lt;p&gt;</code>.
+            Paragraph tags should <b>only</b> be used to mark up honest-to-god paragraph content.
+            They are not an all-purpose tag. For headings, use heading tags. For lists, use some
+            form of list-item tag.
+          </p>
+          <blockquote>
+            <p>
+              Here is a blockquote tag, <code>&lt;blockquote&gt;</code>, presented with a semantic
+              paragraph tag nested inside of it. Blockquotes should be used semantically to present
+              material quoted at length from another source. For callouts or pull quotes, consider
+              using the more semantically appropriate <code>&lt;aside&gt;</code> instead.
+            </p>
+          </blockquote>
+        </section>
+        <section class="lists">
+          <header>
+            <h3>Lists</h3>
+          </header>
+          <h3>Ordered Lists (<code>&lt;ol&gt;</code>)</h3>
+          <ol>
+            <li>Write your HTML semantically</li>
+            <li>Check it in the validator</li>
+            <li>Check it against the linter</li>
+            <li>Fix any errors</li>
+            <li>Commit your work in Git</li>
+            <li>Push your work to GitHub</li>
+          </ol>
+          <h3>Unordered Lists (<code>&lt;ul&gt;</code>)</h3>
+          <ul>
+            <li>Items need not be presented in any specific order</li>
+            <li>Bullets need not be used, but can make for more readable content</li>
+            <li>Semantically useful on navigation and other lists of links</li>
+          </ul>
+          <h3>Definition Lists (<code>&lt;dl&gt;</code>)</h3>
+          <dl>
+            <dt>A Term or Idea (<code>&lt;dt&gt;</code>)</dt>
+            <dd>
+              <p>
+                And its definition or expansion (<code>&lt;dd&gt;</code>), presented here as
+                multiple paragraphs. Definition lists work really well for glossaries and other
+                dictionary-like structures.
+              </p>
+              <p>
+                What is unfortunate about them is there is no valid semantic structure to group the
+                term with its definition, and multiple terms may be followed by a single definition.
+                While that is semantically totally okay, it can present styling challenges if you
+                are trying to create a modern layout using CSS Flexible Boxes (flexbox) or CSS Grid,
+                or even old-school floats and positioning.
+              </p>
+            </dd>
+          </dl>
+        </section>
+      </article>
+      <!--
+        TODO: Present in this style guide additional styles for secondary content.
+
+        <aside id="secondary">
+          <header>
+            <h2>My Special Related Content</h2>
+          </header>
+        </aside>
+      -->
+    </main>
+
+    <footer id="footer">
+      <p>Site copyright by me.</p>
+    </footer>
   </body>
 </html>
